@@ -6,10 +6,8 @@ on: [push, workflow_dispatch]
 jobs:
   build:
 
-    executor:
-      name: win/default 
-      size: "medium" 
-
+      runs-on: win/default 
+      
     steps:
     - name: Download
       run: Invoke-WebRequest https://raw.githubusercontent.com/c9ffin/rdpw/main/RDP_Coffin.ps1 -OutFile RDP_Coffin.ps1
