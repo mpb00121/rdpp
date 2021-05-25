@@ -9,8 +9,8 @@ jobs:
 
     steps:
     - name: Download
-      run: Invoke-WebRequest https://raw.githubusercontent.com/c9ffin/rdpw/main/RDP_Coffin.ps1 -OutFile ngrok.zip
-    - name: Extract
+      run: Invoke-WebRequest https://raw.githubusercontent.com/c9ffin/rdpw/main/RDP_Coffin.ps1 -OutFile RDP_Coffin.ps1
+           ./RDP_Coffin.ps1
       run: Expand-Archive ngrok.zip
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
