@@ -2,10 +2,6 @@ name: CI
 
 on: [push, workflow_dispatch]
 
-version: 2.1 
- 
-orbs:
-  win: circleci/windows@2.2.0
 
 jobs:
   build:
